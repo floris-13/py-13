@@ -1,7 +1,13 @@
-from argparse import ArgumentParser
+
 import sys
+from argparse import ArgumentParser
+from config import Config
+
 
 # py-13: Easy to use Templating Engine, that generates static websites from Markdown - written in Python.
+
+
+mainConfig = Config()
 
 
 def compile_project(path: str):
@@ -22,6 +28,12 @@ def compile_project(path: str):
         sys.exit()
 
     print(f'Content of "{config_file}" file: "{content}"')
+
+    # Load config.txt
+
+    mainConfig.load_config_file(config_file)
+
+    print(f'Value of hello is "{mainConfig.get_value("hello")}"')
 
 
 if __name__ == '__main__':
