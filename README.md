@@ -1,5 +1,17 @@
 # Project py-13
 
+```
+                         .o    .oooo.   
+                       o888  .dP""Y88b  
+oo.ooooo.  oooo    ooo  888        ]8P' 
+ 888' `88b  `88.  .8'   888      <88b.  
+ 888   888   `88..8'    888       `88b. 
+ 888   888    `888'     888  o.   .88P  
+ 888bod8P'     .8'     o888o `8bd88P'   
+ 888       .o..P'                       
+o888o      `Y8P'
+```
+
 Easy to use Templating Engine, that generates static websites from Markdown - written in Python.
 
 ## Why Floris, why? Kind of manifesto.
