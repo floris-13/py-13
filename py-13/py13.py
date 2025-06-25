@@ -1,6 +1,27 @@
 from argparse import ArgumentParser
+import sys
 
 # py-13: Easy to use Templating Engine, that generates static websites from Markdown - written in Python.
+
+
+def compile_project(path: str):
+
+    """
+    Compiles source files to website files within the given project-folder.
+
+    :param path: Path to the project folder.
+    """
+
+    config_file = path + "/config.txt"
+
+    try:
+        with open(config_file, 'r', encoding='utf-8') as file:
+            content = file.read()
+    except OSError:
+        print(f'Unable to open file "{config_file}".')
+        sys.exit()
+
+    print(f'Content of "{config_file}" file: "{content}"')
 
 
 if __name__ == '__main__':
@@ -30,8 +51,9 @@ if __name__ == '__main__':
     print('\n')
 
     if args.compile:
-        print(f'Compiling project directory "{args.compile}".')
-        print("Oops ..Your wish is my command .. but sorry .. not yet implemented.")
+        compile_project(args.compile)
+        # print(f'Compiling project directory "{args.compile}".')
+        # print("Oops ..Your wish is my command .. but sorry .. not yet implemented.")
     elif args.init:
         print(f'Initializing project directory "{args.init}".')
         print("Oops ..Your wish is my command .. but sorry .. not yet implemented.")
