@@ -6,12 +6,22 @@
 
 [Common]
 
-py13_version   : 1.0.0
+# Section "Common" is for general configuration.
+
+py13_version      : 1.0.0
 
 
-[Directories]
+[Project Folder]
 
-source_dir     : source
-website_dir    : website
+# Section "Project Folder" contains some Sub-Foldernames within in the Project Folder.
 
-ressourses_dir : ${source_dir}/ressources
+source_folder     : source
+website_folder    : website
+
+
+[Source Folder]
+
+# Section "Source Folder" contains some Sub-Foldernames within in the Source Folder.
+# ressources_folder is used to store images, PDFs ond other ressources.
+
+ressourses_folder : ressources

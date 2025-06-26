@@ -1,5 +1,6 @@
 
 import sys
+from files import *
 from argparse import ArgumentParser
 from config import Config
 
@@ -18,11 +19,29 @@ def compile_project(path: str):
     :param path: Path to the project folder.
     """
 
+    # Load Config file and read Version Info
+
     config_file = path + "/config.txt"
     mainConfig.load_config_file(config_file)
 
     print(f'Loaded config file: "{config_file}"')
     print(f'py13 Version is "{mainConfig.get_py13_version()}"')
+
+    # Read index.md from source folder
+
+    source_file = path + "/" + mainConfig.get_source_folder() + "/index.md"
+    content = file_to_string(source_file)
+
+    print(f'Read source file: "{source_file}"')
+    print(f'It contains: "{content}"')
+
+    # Write index.html to website folder
+
+    website_file = path + "/" + mainConfig.get_website_folder() + "/index.html"
+    ret = string_to_file(website_file, content)
+    print(f'Write website file: "{website_file}"')
+    print(f'It contains: "{content}"')
+    print(f'Write returned: "{ret}"')
 
 
 if __name__ == '__main__':

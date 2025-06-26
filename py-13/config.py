@@ -65,3 +65,8 @@ class Config:
     def get_py13_version(self):
         return self.config['Common']['py13_version']
 
+    def get_source_folder(self):
+        return self.config['Project Folder']['source_folder']
+
+    def get_website_folder(self):
+        return self.config['Project Folder']['website_folder']
