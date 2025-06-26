@@ -82,7 +82,7 @@ I wanted something like 11ty, but easier to understand for the user (including m
 
 I decided to make it open source, for everyone to use, but it's still a hobby project, so please be kind don't expect too many commits per month. And as I said, please don't expect perfect Python code yet.
 
-And this is also the reason why I write here so much: I don't have a tool yet to convert my Markdown into HTML to put in on a website - so i put it into this README-file. As a starting point, motivation an d manifesto. No line of code written yet, I will start from scratch.
+And this is also the reason why I write here so much: I don't have a tool yet to convert my Markdown into HTML to put in on a website - so i put it into this README-file. As a starting point, motivation and manifesto. No line of code written yet, I will start from scratch.
 
 ## Some conceptual features of py13
 
@@ -94,6 +94,7 @@ And this is also the reason why I write here so much: I don't have a tool yet to
 	- Templates can style words (rainbow), blocks (gallery) or the whole page (mindnight).
  	- Templates are witten in one Python file each, containing several functions for the functons.
   	- Templates can have config files attached to each `.md` file, e.g. `index.txt` for `index.md`. If not provided, all configurations have the default value.
+- Simplicity first. If a (smaller) feature makes the py-13 usage as a whole (a lot) more complicated, the feature will not be implemented.
 - In common browsers, the resulting website should work als files directly. Without the need for a server.
 - HTML is valid W3C Markup
 
