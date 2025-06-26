@@ -1,1 +1,17 @@
-Hello World, Floris.
+
+# -----------------------------------
+# This is the py13 configuarion file.
+# Go to the website, to learn more.
+# -----------------------------------
+
+[Common]
+
+py13_version   : 1.0.0
+
+
+[Directories]
+
+source_dir     : source
+website_dir    : website
+
+ressourses_dir : ${source_dir}/ressources

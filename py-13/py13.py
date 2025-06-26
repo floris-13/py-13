@@ -19,21 +19,10 @@ def compile_project(path: str):
     """
 
     config_file = path + "/config.txt"
-
-    try:
-        with open(config_file, 'r', encoding='utf-8') as file:
-            content = file.read()
-    except OSError:
-        print(f'Unable to open file "{config_file}".')
-        sys.exit()
-
-    print(f'Content of "{config_file}" file: "{content}"')
-
-    # Load config.txt
-
     mainConfig.load_config_file(config_file)
 
-    print(f'Value of hello is "{mainConfig.get_value("hello")}"')
+    print(f'Loaded config file: "{config_file}"')
+    print(f'py13 Version is "{mainConfig.get_py13_version()}"')
 
 
 if __name__ == '__main__':

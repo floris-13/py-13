@@ -1,4 +1,7 @@
 
+import configparser
+
+
 class Config:
 
     """
@@ -51,21 +54,14 @@ class Config:
 
     """
 
-    config = {}
+    config = configparser.ConfigParser()
 
     def __init__(self):
         super().__init__()
 
     def load_config_file(self, path: str):
+        self.config.read(path)
 
-        """
-        Loads a config file.
-
-        :param path: Path to config file.
-        """
-
-        self.config["hello"] = "world"
-
-    def get_value(self, key: str):
-        return self.config[key]
+    def get_py13_version(self):
+        return self.config['Common']['py13_version']
 
