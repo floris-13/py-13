@@ -95,6 +95,7 @@ And this is also the reason why I write here so much: I don't have a tool yet to
  	- Templates are witten in one Python file each, containing several functions for the functons.
   	- Templates can have config files attached to each `.md` file, e.g. `index.txt` for `index.md`. If not provided, all configurations have the default value.
 - Simplicity first. If a (smaller) feature makes the py-13 usage as a whole (a lot) more complicated, the feature will not be implemented.
+- py-13 will suppert markdown extensions, e.g. with special UTF-8 characters, that make sense without that extension: 🌈rainbow🌈 will compile to rainbow-colored text. Javascript is not an enemy.
 - In common browsers, the resulting website should work als files directly. Without the need for a server.
 - HTML is valid W3C Markup
 
