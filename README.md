@@ -91,7 +91,7 @@ And this is also the reason why I write here so much: I don't have a tool yet to
 - Templates are specified within the `.md` file using comment-systax, if possible.
 	- Template names are "theme:function", e.g. "midnight:gallery".
 	- Templates may need specific Markdown contained in the page to work.
-	- Templates can style words (rainbow), blocks (gallery) or the whole page (mindnight).
+	- Templates can style words (rainbow), blocks (gallery) or the whole page (mindnight). In some cases, the coordinated styling of more than one page is needed. e.g. for menus of blog-pages.
  	- Templates are witten in one Python file each, containing several functions for the functons.
   	- Templates can have config files attached to each `.md` file, e.g. `index.txt` for `index.md`. If not provided, all configurations have the default value.
 - Simplicity first. If a (smaller) feature makes the py-13 usage as a whole (a lot) more complicated, the feature will not be implemented.
