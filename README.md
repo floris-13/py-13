@@ -93,6 +93,7 @@ And this is also the reason why I write here so much: I don't have a tool yet to
 	- Templates may need specific Markdown contained in the page to work.
 	- Templates can style words (rainbow), blocks (gallery) or the whole page (mindnight).
  	- Templates are witten in one Python file each, containing several functions for the functons.
+  	- Templates can have config files attached to each `.md` file, e.g. `index.txt` for `index.md`. If not provided, all configurations have the default value.
 - In common browsers, the resulting website should work als files directly. Without the need for a server.
 - HTML is valid W3C Markup
 
