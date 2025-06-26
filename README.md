@@ -88,9 +88,11 @@ And this is also the reason why I write here so much: I don't have a tool yet to
 
 - All source files are of type `.md`.
 - Every `.md` file compiles to one `.html` file with the same relative path. Exeptions can be made.
-- Templates are specified within the `.md` file using comment-systax.
-- Template names are "theme:function", e.g. "midnight:gallery".
-- Templates may need specific Markdown to work.
+- Templates are specified within the `.md` file using comment-systax, if possible.
+	- Template names are "theme:function", e.g. "midnight:gallery".
+	- Templates may need specific Markdown contained in the page to work.
+	- Templates can style words (rainbow), blocks (gallery) or the whole page (mindnight).
+ 	- Templates are witten in one Python file each, containing several functions for the functons.
 - In common browsers, the resulting website should work als files directly. Without the need for a server.
 - HTML is valid W3C Markup
 
