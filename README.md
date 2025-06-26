@@ -84,9 +84,17 @@ I decided to make it open source, for everyone to use, but it's still a hobby pr
 
 And this is also the reason why I write here so much: I don't have a tool yet to convert my Markdown into HTML to put in on a website - so i put it into this README-file. As a starting point, motivation an d manifesto. No line of code written yet, I will start from scratch.
 
-## Some key features of py13
+## Some conceptual features of py13
 
-- All source files are of type `.md`
+- All source files are of type `.md`.
+- Every `.md` file compiles to one `.html` file with the same relative path. Exeptions can be made.
+- Templates are specified within the `.md` file using comment-systax.
+- Template names are "theme:function", e.g. "midnight:gallery".
+- Templates may need specific Markdown to work.
+- In common browsers, the resulting website should work als files directly. Without the need for a server.
+- HTML is valid W3C Markup
+
+[//]: # (This comment should not be seen)
 
 ## Feature list of upcoming Version 1.0 (MVP)
 
