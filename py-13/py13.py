@@ -1,5 +1,6 @@
 
 import sys
+import markdown
 from files import *
 from argparse import ArgumentParser
 from config import Config
@@ -35,12 +36,16 @@ def compile_project(path: str):
     print(f'Read source file: "{source_file}"')
     print(f'It contains: "{content}"')
 
+    # Convert Markdown to HTML
+
+    html = markdown.markdown(content)
+
     # Write index.html to website folder
 
     website_file = path + "/" + mainConfig.get_website_folder() + "/index.html"
-    ret = string_to_file(website_file, content)
+    ret = string_to_file(website_file, html)
     print(f'Write website file: "{website_file}"')
-    print(f'It contains: "{content}"')
+    print(f'It contains: "{html}"')
     print(f'Write returned: "{ret}"')
 
 
