@@ -15,42 +15,39 @@ def compile_project(path: str):
     :param path: Path to the project folder.
     """
 
-    # Load Config file and read Version Info
+    # Load Config file and print initial compile text.
 
     config_file = path + "/config.txt"
     mainConfig.load_config_file(config_file)
 
-    print(f'Loaded config file: "{config_file}"')
-    print(f'py13 Version is "{mainConfig.get_py13_version()}"')
+    print(f'Welcome to py13 version 0.0.0.')
+    print(f'Compiling project folder "{path}" containing version {mainConfig.get_py13_version()} with BASE template.\n')
 
     # Find markdown files
 
     markdown_files = find_markdown_files(path + "/" + mainConfig.get_source_folder())
 
-    print("Found these Markdown files:")
+    print(f'Found {len(markdown_files)} Markdown files to compile:\n')
+
     for markdown_file in markdown_files:
-        print(markdown_file)
 
-    # Read index.md from source folder
+        # Read index.md from source folder
 
-    source_file = path + "/" + mainConfig.get_source_folder() + "/index.md"
-    content = file_to_string(source_file)
+        content = file_to_string(markdown_file)
 
-    print(f'Read source file: "{source_file}"')
-    print(f'It contains: "{content}"')
+        print(f'Read source file: "{markdown_file}"')
 
-    # Convert Markdown to HTML
+        # Convert Markdown to HTML
 
-    html = markdown.markdown(content)
+        html = markdown.markdown(content)
 
-    # Write index.html to website folder
+        # Write index.html to website folder
 
-    website_file = path + "/" + mainConfig.get_website_folder() + "/index.html"
-    ret = string_to_file(website_file, html)
-    print(f'Write website file: "{website_file}"')
-    print(f'It contains: "{html}"')
-    print(f'Write returned: "{ret}"')
+        filename_without_extension = os.path.splitext(os.path.basename(markdown_file))[0]
 
-    # Hello World
+        website_file = path + "/" + mainConfig.get_website_folder() + "/" + filename_without_extension + ".html"
+        ret = string_to_file(website_file, html)
 
-    print(f'Hello World, I\'m the base template, working now on path: "{path}"')
+        print(f'Write website file: "{website_file}"')
+        print(f'{ret}\n')
+
