@@ -1,6 +1,23 @@
 import os
 
 
+def find_markdown_files(path):
+    """
+    Searches the given folder and subfolders for .md files and returns
+    a list of full paths.
+
+    :param path: The path to the root folder
+    :return: List of the found .md-files
+    """
+    markdown_files = []
+    for root, dirs, files in os.walk(path):
+        for datei in files:
+            if datei.lower().endswith('.md'):
+                full_path = os.path.join(root, datei)
+                markdown_files.append(full_path)
+    return markdown_files
+
+
 def string_to_file(path: str, content: str) -> str:
 
     """

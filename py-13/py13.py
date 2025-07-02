@@ -28,6 +28,14 @@ def compile_project(path: str):
     print(f'Loaded config file: "{config_file}"')
     print(f'py13 Version is "{mainConfig.get_py13_version()}"')
 
+    # Find markdown files
+
+    markdown_files = find_markdown_files(path + "/" + mainConfig.get_source_folder())
+
+    print("Found these Markdown files:")
+    for markdown_file in markdown_files:
+        print(markdown_file)
+
     # Read index.md from source folder
 
     source_file = path + "/" + mainConfig.get_source_folder() + "/index.md"
