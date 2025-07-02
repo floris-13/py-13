@@ -1,4 +1,5 @@
 
+import importlib
 import sys
 import markdown
 from files import *
@@ -55,6 +56,9 @@ def compile_project(path: str):
     print(f'Write website file: "{website_file}"')
     print(f'It contains: "{html}"')
     print(f'Write returned: "{ret}"')
+
+    mod = importlib.import_module("templates.base")
+    mod.compile_project(path)
 
 
 if __name__ == '__main__':
