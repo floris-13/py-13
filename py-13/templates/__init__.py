@@ -1,2 +1,4 @@
 
-print("Hi from init.")
+from config import Config
+
+
