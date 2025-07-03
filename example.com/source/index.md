@@ -1,73 +1,51 @@
-# Markdown to HTML Feature Showcase
+# py-13 Documentation
 
-Welcome to this **Markdown to HTML** demo document! This file is designed to show off various _Markdown_ features in one place.
+The latest **py-13** version is ***0.0.0*** called ***The PreRelease***.
 
-## Table of Contents
+## Supported Basic Markdown
 
-1. Text Formatting
-2. Lists
-3. Links & Images
-4. Code
-5. Blockquotes
-6. Horizontal Rules
-7. Task Lists
-8. Embedded HTML
+You can find a *complete* overview of the Basic Markdown Syntax at [Markdown Guide](https://www.markdownguide.org/basic-syntax/). Most of it is already supported by **py-13**:
 
-## Text Formatting
+### Text Formatting
 
 **Bold Text**  
 *Italic Text*  
 ***Bold and Italic***  
-~~Strikethrough~~  
 <sub>Subscript</sub> and <sup>Superscript</sup>
 
-You can also insert emojis: 🎉 🚀 💡
+Emojis: 🎉 🚀 💡
 
-## Lists
+### Lists
 
-### Unordered List
+#### Unordered List
 
-- Item 1
-  - Subitem 1.1
-  - Subitem 1.2
-- Item 2
+- One
+- Two
+- Three
 
-### Ordered List
+#### Ordered List
 
 1. First
 2. Second
-   3. Sub-second
-   4. Sub-third
-5. Third
+3. Third
 
-## Links & Images
+### Links & Images
 
-### Link
+#### Link
 
-Visit [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
+Outside Link: [Visit Wikipedia](https://en.wikipedia.org/wiki/Main_Page).
 
-### Image
+#### Image
+
+Outside Image:
 
 ![Markdown Logo](https://markdown-here.com/img/icon256.png)
 
-## Code
+### Code
 
-### Inline Code
+#### Inline Code
 
 Use the `printf()` function in C.
-
-### Code Block
-
-```python
-def greet(name):
-    print(f"Hello, {name}!")
-```
-
-You can also specify other languages like `javascript`, `html`, `bash`, etc.
-
-```bash
-echo "Hello, Markdown!"
-```
 
 ## Blockquotes
 
@@ -78,30 +56,17 @@ echo "Hello, Markdown!"
 > > Second level
 > > > Third level
 
-## Horizontal Rules
+### Horizontal Rules
 
-In Markdown, these are three different versions of horizontal rules:
+That one:
 
 ---
 
-***
-
-___
-
-And all look the same in HTML.
-
-## Task Lists
-
-- [x] Write example markdown
-- [ ] Add more features
-- [ ] Publish to GitHub
-
-## Embedded HTML
+### Embedded HTML
 
 <p style="color: pink; font-weight: bold;">This is a custom HTML block!</p>
 
-You can use raw HTML in Markdown, but be aware of rendering issues.
 
-## End
 
-Thanks for reading this Markdown to HTML feature showcase. Have fun compiling! 😊
+
+
